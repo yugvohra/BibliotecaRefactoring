@@ -15,6 +15,7 @@ local.properties
 .gitignore
 .gitattributes
 .idea/*
+Bib*.iml
 *.class
 # External tool builders
 .externalToolBuilders/

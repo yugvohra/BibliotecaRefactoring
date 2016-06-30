@@ -49,27 +49,7 @@ public class Program {
                     System.out.println("Enter a valid integer!!");
 
                 }
-                switch (i2) {
-                    case 1:
-                        System.out.println("\n");
-                        System.out.println(" Thank You! Enjoy the book.");
-                        break;
-                    case 2:
-                        System.out.println("\n");
-                        System.out.println(" Thank You! Enjoy the book.");
-                        break;
-                    case 3:
-                        System.out.println("\n");
-                        System.out.println(" Thank You! Enjoy the book.");
-                        break;
-                    case 4:
-                        System.out.println("\n");
-                        System.out.println(" Thank You! Enjoy the book.");
-                        break;
-                    default:
-                        System.out.println("\n");
-                        System.out.println("Sorry we don't have that book yet.");
-                }
+                issueBook(i2);
             } else if (i1 == 3) {
                 if (loggedIn()) {
                     System.out.println("\n");
@@ -118,6 +98,30 @@ public class Program {
                 System.out.println("\n");
                 System.out.println("Enter a valid integer!!");
             }
+        }
+    }
+
+    private static void issueBook(int indexOfBook) {
+        switch (indexOfBook) {
+            case 1:
+                System.out.println("\n");
+                System.out.println(" Thank You! Enjoy the book.");
+                break;
+            case 2:
+                System.out.println("\n");
+                System.out.println(" Thank You! Enjoy the book.");
+                break;
+            case 3:
+                System.out.println("\n");
+                System.out.println(" Thank You! Enjoy the book.");
+                break;
+            case 4:
+                System.out.println("\n");
+                System.out.println(" Thank You! Enjoy the book.");
+                break;
+            default:
+                System.out.println("\n");
+                System.out.println("Sorry we don't have that book yet.");
         }
     }
 
