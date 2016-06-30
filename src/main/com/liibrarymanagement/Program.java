@@ -9,19 +9,7 @@ public class Program {
 
     public static void main(String[] args) {
         while (true) {
-            System.out.println("**********************************************************");
-            System.out.println("* Welcome to The Bangalore Public Library System - Biblioteca *");
-            System.out.println("**********************************************************");
-            System.out.println("*                Menu                                    *");
-            System.out.println("*         =====================                          *");
-            System.out.println("*         1. List Book Catalog                           *");
-            System.out.println("*         2. Check out Book                              *");
-            System.out.println("*         3. Check Library Number                        *");
-            System.out.println("*         4. Movie Listing                               *");
-            System.out.println("*         5. Login                                       *");
-            System.out.println("*         9. Exit                                        *");
-            System.out.println("**********************************************************");
-            System.out.println("Your Selection: ");
+            showLibraryMenu();
 
             InputStreamReader inputStream = new InputStreamReader(System.in);
             BufferedReader reader = new BufferedReader(inputStream);
@@ -35,10 +23,7 @@ public class Program {
             }
 
             if (i1 == 1) {
-                System.out.println(" 1. Sweet Valley High vol. 4 by John Travolta ");
-                System.out.println(" 2. eXtreme Programming Explained by Kent Beck ");
-                System.out.println(" 3. How to Win Friends and Influence People by Dale Carnagie ");
-                System.out.println(" 4. How to Cheat at TWU Assignements by Anonymous ");
+                displayListOfBooks();
             } else if (i1 == 2) {
                 System.out.println(" Please enter the number of the book you wish to checkout: ");
                 int i2 = 0;
@@ -60,16 +45,7 @@ public class Program {
                     System.out.println("Please talk to Librarian. Thank you.");
                 }
             } else if (i1 == 4) {
-                System.out.println(createMovie("Rocky", "John G. Avildsen", "10"));
-                System.out.println(createMovie("Rocky II", "John G. Avildsen", "9"));
-                System.out.println(createMovie("Rocky III", "John G. Avildsen", "8"));
-                System.out.println(createMovie("Rocky IV", "John G. Avildsen", "7"));
-                System.out.println(createMovie("Rocky V", "John G. Avildsen", "8"));
-                System.out.println(createMovie("Drainage", "Francisco Trindade", "N/A"));
-                System.out.println(createMovie("The Shawshank Redemption", "Frank Darabont", "10"));
-                System.out.println(createMovie("The Godfather", "Francis Ford Coppola", "7"));
-                System.out.println(createMovie("Inception", "Frank Darabont", "10"));
-                System.out.println(createMovie("Pulp Fiction", "Quentin Tarantino", "6"));
+                displayListOfMovies();
             } else if (i1 == 5) {
                 clearLogin();
                 System.out.println("Enter your library number");
@@ -99,6 +75,42 @@ public class Program {
                 System.out.println("Enter a valid integer!!");
             }
         }
+    }
+
+    private static void displayListOfMovies() {
+        System.out.println(createMovie("Rocky", "John G. Avildsen", "10"));
+        System.out.println(createMovie("Rocky II", "John G. Avildsen", "9"));
+        System.out.println(createMovie("Rocky III", "John G. Avildsen", "8"));
+        System.out.println(createMovie("Rocky IV", "John G. Avildsen", "7"));
+        System.out.println(createMovie("Rocky V", "John G. Avildsen", "8"));
+        System.out.println(createMovie("Drainage", "Francisco Trindade", "N/A"));
+        System.out.println(createMovie("The Shawshank Redemption", "Frank Darabont", "10"));
+        System.out.println(createMovie("The Godfather", "Francis Ford Coppola", "7"));
+        System.out.println(createMovie("Inception", "Frank Darabont", "10"));
+        System.out.println(createMovie("Pulp Fiction", "Quentin Tarantino", "6"));
+    }
+
+    private static void displayListOfBooks() {
+        System.out.println(" 1. Sweet Valley High vol. 4 by John Travolta ");
+        System.out.println(" 2. eXtreme Programming Explained by Kent Beck ");
+        System.out.println(" 3. How to Win Friends and Influence People by Dale Carnagie ");
+        System.out.println(" 4. How to Cheat at TWU Assignements by Anonymous ");
+    }
+
+    private static void showLibraryMenu() {
+        System.out.println("**********************************************************");
+        System.out.println("* Welcome to The Bangalore Public Library System - Biblioteca *");
+        System.out.println("**********************************************************");
+        System.out.println("*                Menu                                    *");
+        System.out.println("*         =====================                          *");
+        System.out.println("*         1. List Book Catalog                           *");
+        System.out.println("*         2. Check out Book                              *");
+        System.out.println("*         3. Check Library Number                        *");
+        System.out.println("*         4. Movie Listing                               *");
+        System.out.println("*         5. Login                                       *");
+        System.out.println("*         9. Exit                                        *");
+        System.out.println("**********************************************************");
+        System.out.println("Your Selection: ");
     }
 
     private static void issueBook(int indexOfBook) {
