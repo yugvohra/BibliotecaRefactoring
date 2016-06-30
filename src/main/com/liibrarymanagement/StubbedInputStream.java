@@ -1,10 +1,10 @@
-package test;
+package com.liibrarymanagement;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Queue;
 
-class StubbedInputStream extends InputStream {
+public class StubbedInputStream extends InputStream {
     private Queue<String> input;
 
     public StubbedInputStream(Queue<String> input) {

@@ -1,14 +1,17 @@
-package test;
+package com.librarymanagement;
 
-import main.Program;
+import com.liibrarymanagement.Program;
 import org.junit.After;
-import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.matchers.JUnitMatchers.containsString;
-import static test.StubbedInputStream.stubInputStream;
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+
+import static com.liibrarymanagement.StubbedInputStream.stubInputStream;
+import static org.junit.Assert.assertThat;
+import static org.junit.matchers.JUnitMatchers.containsString;
 
 public class ProgramTest {
     private PrintStream console;

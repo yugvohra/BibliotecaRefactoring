@@ -1,14 +1,17 @@
-package test;
+package com.librarymanagement;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import com.liibrarymanagement.StubbedInputStream;
 import org.junit.Test;
-import static test.StubbedInputStream.stubInputStream;
 
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
+
+
+import static com.liibrarymanagement.StubbedInputStream.stubInputStream;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 
 public class StubbedInputStreamTest {

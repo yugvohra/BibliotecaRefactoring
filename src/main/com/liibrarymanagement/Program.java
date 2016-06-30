@@ -1,4 +1,4 @@
-package main;
+package com.liibrarymanagement;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
